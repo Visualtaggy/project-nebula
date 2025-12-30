@@ -1,0 +1,16 @@
+#!/bin/sh
+# Mount essential virtual filesystems for the kernel
+mount -t devtmpfs  devtmpfs  /dev
+mount -t proc      proc      /proc
+mount -t sysfs     sysfs     /sys
+mount -t tmpfs     tmpfs     /tmp
+
+echo ""
+echo "---------------------------------------"
+echo "   PROJECT NEBULA SKELETON LOADED"
+echo "   Target: Alienware x16 R2 (i9-185H)"
+echo "---------------------------------------"
+echo ""
+
+# This drops you into a shell so you can actually use the OS
+exec /bin/sh
